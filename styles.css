@@ -1,0 +1,156 @@
+/* 1) Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #fafafa;
+  line-height: 1.6;
+}
+
+/* 2) Conteúdo centralizado e com respiro */
+header, main, footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* 3) Header + Nav */
+header {
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  line-height: 1.2;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s, opacity 0.2s, background-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  color: #0a58ca;
+  opacity: 0.95;
+  background-color: rgba(11, 94, 215, 0.08);
+  text-decoration: none;
+}
+
+nav a:focus-visible,
+form button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(11, 94, 215, 0.35);
+  outline-offset: 2px;
+}
+
+/* 4) Seções */
+section {
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+h2 {
+  margin: 0 0 8px 0;
+}
+
+/* 5) Listas */
+ul {
+  margin: 8px 0 0 18px;
+}
+
+.aviso-projetos {
+  background-color: #ffe5e5;
+  border: 1px solid #cc4444;
+  color: #7a1f1f;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+/* 6) Formulário (sem depender de <br>) */
+form {
+  margin-top: 16px;
+  max-width: 520px;
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, textarea, button {
+  font: inherit;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form button {
+  background-color: #289842;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s, opacity 0.2s;
+  cursor: pointer;
+}
+
+form button:hover {
+  opacity: 0.95;
+  background-color: #39a751;
+}
+
+/* 7) Footer */
+footer {
+  border-top: 1px solid #ddd;
+}
+
+a {
+  color: #0b5ed7;
+}
+
+main a:hover,
+footer a:hover {
+  opacity: 0.95;
+}
+
+
+@media (max-width: 600px) {
+  header, main, footer {
+    padding: 12px;
+  }
+
+  input, textarea, button {
+    padding: 12px;
+  }
+
+  nav {
+    gap: 8px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
